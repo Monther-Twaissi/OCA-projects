@@ -1,37 +1,97 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
 
-You can use the [editor on GitHub](https://github.com/Monther-Twaissi/OCA-projects/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+  <!-- javascript wasnt used in this file, the link is just for self styling, if any -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>My-Portfolio</title>
+</head>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<body>
+  <!-- navigator -->
+  <div class="container-fluid">
+    <nav class="nav">
+      <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+      <li class="nav-item"><a href="http://127.0.0.1:5500/index-1.html" class="nav-link">My Projects</a></li>
+      <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+      <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+    </nav>
 
-### Markdown
+    <main>
+      <!-- Home Section -->
+      <section id="home">
+        <h1 class="m-header-text">My Name Is <span class="m-brand-text"> Monther </span></h1>
+        <p class="m-header-text" style="margin-top: 0; font-size: 2em;">I'm a training to be a full stack developer @
+          <span class="orange"> Orange Coding
+            Academy</span></p><br><br>
+        <img src="/img/47386345_1972020342834210_2482198833153441792_o1.jpg" alt="Monther" class="m-avatar">
+      </section>
+      <!-- Skils Section -->
+      <section id="skills">
+        <h1>My Skills</h1>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        <div class="skills-container">
+          <div class="m-card">
+            <a href="http://127.0.0.1:5500/index-1.html">
+              <img src="./img/html.png" alt="html icon" class="m-card-image"></a>
+            <h3 class="m-card-header" style="padding-top: 40%;">HTML</h3>
+            <p class="m-card-description">6.5/10</p>
 
-```markdown
-Syntax highlighted code block
+          </div>
+          <div class="m-card">
+            <a href="http://127.0.0.1:5500/index-1.html"><img src="./img/css.png" alt="css icon"
+                class="m-card-image"></a>
+            <h3 class="m-card-header" style="padding-top: 30%;">CSS</h3>
+            <p class="m-card-description">6/10</p>
+          </div>
+          <div class="m-card">
+            <a href="http://127.0.0.1:5500/index-1.html"><img src="./img/sass.png" alt="Sass" class="m-card-image"></a>
+            <h3 class="m-card-header" style="padding-top: 65%;">SASS</h3>
+            <p class="m-card-description">7/10</p>
+          </div>
+        </div>
+      </section>
 
-# Header 1
-## Header 2
-### Header 3
+    </main>
+  </div>
+  <!-- Contact/footer section -->
+  <footer>
+    <div id="m-contact-items">
+      <section id="contact">
+        <ul class="m-contact-list">
+          <li class="m-contact-item">
+            <i class="fas fa-envelope"></i>
+            <p class="m-text">monzer.twaissi@gmail.com</p>
+          </li>
+          <li class="m-contact-item">
+            <i class="fab fa-linkedin"></i>
+            <p class="m-text"><a href="https://www.linkedin.com/in/monther-twaissi/" target="_blank">Linkedin</a> </p>
+          </li>
+          <li class="m-contact-item">
+            <i class="fas fa-phone"></i>
+            <p class="m-text">+962778982309</p>
+          </li>
+          <li class="m-contact-item">
+            <i class="fab fa-facebook-square"></i>
+            <p class="m-text"><a href="https://facebook.com/monthertwaissi" target="_blank">Facebook</a> </p>
+          </li>
+        </ul>
+      </section>
+      <section id="DM">
+        Feel free to contact me directly by applying this <a href="http://127.0.0.1:5500/index-2.html"
+          target="_blank">Form</a>
+      </section>
+    </div>
+  </footer>
 
-- Bulleted
-- List
+</body>
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Monther-Twaissi/OCA-projects/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+</html>
