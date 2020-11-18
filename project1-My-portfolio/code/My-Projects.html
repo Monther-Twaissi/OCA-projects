@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>My Projects</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        --bg-color: #252934;
+        --nav-color: #003d82;
+        --footer-color: #002f63;
+        --acent-color: #0c53a6;
+        --highlite-color: #2b6abc;
+      }
+
+      body {
+        background-image: url(https://img.wallpapersafari.com/desktop/1920/1080/75/32/zKYG1E.jpg);
+        background-size: cover;
+        padding: 20px;
+        font-family: Arial;
+      }
+
+      h1 {
+        font-size: 50px;
+        word-break: break-all;
+      }
+
+      .row {
+        margin: 8px -16px;
+        display: flex !important;
+      }
+
+      .row > .column {
+        padding: 8px;
+      }
+
+      .column {
+        float: right;
+        width: 25%;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      .content {
+        color: snow;
+        border: snow 3px solid;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      .content {
+        font-size: 1.5em;
+        padding-top: 1.5em;
+      }
+
+      h1 {
+        padding-top: 2em;
+        color: oldlace;
+      }
+
+      h1:hover {
+        color: palegoldenrod;
+      }
+      .nav-item:after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 5px;
+        width: 0px;
+        background: transparent;
+        transition: width 0.5s ease, background-color 0.5s ease;
+      }
+
+      .nav-link {
+        color: #fff;
+        text-decoration: none;
+        padding-bottom: 0;
+        font-size: 1.2em;
+      }
+
+      .nav-link:hover {
+        color: #fff;
+      }
+
+      .nav-item:hover:after {
+        color: #fdf8f3;
+        width: 95%;
+        background: #fdf8f3;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+
+        height: 3em;
+      }
+      .footer {
+        width: 20vw;
+        text-align: center;
+        margin-left: 40%;
+      }
+
+      @media screen and (max-width: 1024px) {
+        .column {
+          width: 50%;
+        }
+        .row {
+          overflow: hidden;
+          margin-left: 0;
+          margin-right: 2em;
+          padding-left: 7% !important;
+        }
+        .footer {
+          position: relative !important;
+          bottom: 0 !important;
+          right: 25% !important;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+        .nav {
+          position: absolute;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <li class="nav-item">
+        <a href="http://127.0.0.1:5500/index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="http://127.0.0.1:5500/index-1.html" class="nav-link"
+          >My Projects</a
+        >
+      </li>
+
+      <li class="nav-item">
+        <a href="http://127.0.0.1:5500/index-2.html#contact" class="nav-link"
+          >Contact</a
+        >
+      </li>
+    </nav>
+
+    <div class="main">
+      <h1>My Projects</h1>
+      <hr style="background-color: oldlace" />
+
+      <h2 style="color: oldlace">
+        As a trainee, my projects still small and maybe contain some issues, but
+        some day, this portfolio will be one of the richest you've ever seen
+      </h2>
+      <p style="font-size: 1em; color: oldlace">
+        Now, Lets make a trip around my projects.
+      </p>
+
+      <div
+        class="row"
+        style="
+          align-items: center;
+          padding-left: 20%;
+          padding-top: 10%;
+          margin-bottom: 10%;
+        "
+      >
+        <div class="column">
+          <div class="content">
+            <a
+              href="https://monther-twaissi.github.io/7-10-SASS/"
+              target="_blank"
+            >
+              <img
+                src="/img/Screenshot (4).png"
+                alt="SASS Boxes"
+                style="width: 100%"
+            /></a>
+            <h3>Boxes using SASS</h3>
+            <p>
+              The last code i wrote before this project..it was very fun to use
+              SASS
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <a
+              href="https://github.com/Monther-Twaissi/Main-Tasks"
+              target="_blank"
+            >
+              <img
+                src="/img/Screenshot (5).png"
+                alt="Codes"
+                style="width: 100%"
+            /></a>
+            <h3>My Codes</h3>
+            <p>
+              This is the tasks we were given by OCA, feel free to check the out
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="content">
+            <a
+              href="https://github.com/Monther-Twaissi/6-10-Tasks"
+              target="_blank"
+            >
+              <img
+                src="/img/Screenshot (6).png"
+                alt="other codes"
+                style="width: 100%"
+            /></a>
+
+            <h3>grid,flex</h3>
+            <p>
+              First step to master html,css is to know how to use these things!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <a
+          class="link"
+          href="http://127.0.0.1:5500/index.html"
+          style="
+            color: oldlace;
+            font-size: 500%;
+            border: oldlace solid;
+            border-radius: 15px;
+            padding: 10px;
+          "
+          >Back</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

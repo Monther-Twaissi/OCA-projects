@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap");
 
 :root {
   --bg-color: #252934;
-  --nav-color: #003D82;
-  --footer-color: #002F63;
-  --acent-color: #0C53A6;
-  --highlite-color: #2B6ABC;
+  --nav-color: #003d82;
+  --footer-color: #002f63;
+  --acent-color: #0c53a6;
+  --highlite-color: #2b6abc;
 }
 
 .m-icon {
@@ -28,11 +28,10 @@
   border-radius: 50%;
   width: 23em;
   height: 22em;
-
 }
 
 .m-header-text {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 38pt;
   color: #fff;
   text-align: center;
@@ -69,7 +68,7 @@
   color: #fff;
 }
 
-.m-contact-item>i {
+.m-contact-item > i {
   margin: 7px 1em 0 0;
 }
 
@@ -79,13 +78,13 @@
 }
 
 .nav-item:after {
-  content: '';
+  content: "";
   display: block;
   margin: auto;
   height: 5px;
   width: 0px;
   background: transparent;
-  transition: width .5s ease, background-color .5s ease;
+  transition: width 0.5s ease, background-color 0.5s ease;
 }
 
 .nav-link {
@@ -100,7 +99,7 @@
 }
 
 .nav-item:hover:after {
-  color: #FDF8F3;
+  color: #fdf8f3;
   width: 95%;
   background: var(--highlite-color);
 }
@@ -110,7 +109,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 nav {
@@ -133,7 +132,6 @@ footer {
 
 a:link {
   text-decoration: none;
-
 }
 
 a:visited {
@@ -145,16 +143,15 @@ a:visited {
   text-align: end;
   margin-left: 15vw;
   font-size: 2em;
-
 }
 
 section {
   margin: 1em 0;
 }
 
-section>h1 {
+section > h1 {
   color: #fff;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   text-align: center;
   margin-bottom: 2em;
 }
@@ -187,6 +184,10 @@ section>h1 {
     justify-content: center;
     height: 5em;
     position: relative;
+  }
+
+  #home {
+    margin-top: 5em;
   }
 
   .skills-container {

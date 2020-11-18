@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+    integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Contact Me</title>
+    <style>
+      :root {
+        --bg-color: #252934;
+        --nav-color: #003d82;
+        --footer-color: #002f63;
+        --acent-color: #0c53a6;
+        --highlite-color: #2b6abc;
+      }
+
+      .m-text {
+        width: 50vw;
+        border: 3px solid white;
+        border-radius: 10px;
+        padding: 1em;
+        color: honeydew;
+        margin: 5em 0 0 3em;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        height: 100%;
+        padding: 12px;
+        border: 1px solid gainsboro;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: white;
+        color: black;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .m-container {
+        width: 45vw;
+        border-radius: 5px;
+        background-color: #eceaea;
+        padding: 20px;
+        margin-top: 3em;
+        margin-left: 3em;
+        justify-self: left;
+      }
+
+      .nav-item:after {
+        content: "";
+        display: block;
+        margin: auto;
+        height: 5px;
+        width: 0px;
+        background: transparent;
+        transition: width 0.5s ease, background-color 0.5s ease;
+      }
+
+      .nav-link {
+        color: #fff;
+        text-decoration: none;
+        padding-bottom: 0;
+        font-size: 1.2em;
+      }
+
+      .nav-link:hover {
+        color: #fff;
+      }
+
+      .nav-item:hover:after {
+        color: #fdf8f3;
+        width: 95%;
+        background: var(--highlite-color);
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        background-color: var(--nav-color);
+        height: 3em;
+      }
+      @media screen and (min-width: 700px) {
+        body {
+          background-image: url(https://www.dorandabizs.com/wp-content/uploads/2016/05/web-and-mobile-apps-development-solutions.jpg);
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        body {
+          background-image: url(https://cdn.wallpapersafari.com/38/75/DcdCR5.jpg);
+          background-size: cover;
+        }
+
+        .m-text {
+          width: inherit;
+
+          padding: 0;
+          color: gainsboro;
+          /* font-size: 1vw; */
+        }
+
+        .text-header {
+          font-size: 20px;
+        }
+
+        #m-main {
+          margin: 0;
+          padding: 0;
+          justify-self: left;
+        }
+        .m-container {
+          display: inherit;
+        }
+        .nav {
+          position: absolute;
+        }
+      }
+      @media screen and (max-width: 1024px) {
+        .m-text {
+          width: 80vw !important;
+        }
+        .m-containe {
+          width: 80vw !important;
+        }
+        .nav {
+          width: 100vw !important;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <li class="nav-item">
+        <a href="http://127.0.0.1:5500/index.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="http://127.0.0.1:5500/index-1.html" class="nav-link"
+          >My Projects</a
+        >
+      </li>
+      <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+    </nav>
+
+    <main id="m-main">
+      <div class="m-text">
+        <h1 class="text-header">
+          You can contact me by filling this form, I will response as soon as
+          possible.
+        </h1>
+        <h3 class="text-subheader">Thanks for your time</h3>
+      </div>
+
+      <div
+        class="m-containe form-static input-sm"
+        style="
+          color: ivory;
+          width: 50vw;
+          margin: 3em 0 0 3em;
+          border: 5px solid white;
+          padding: 2em;
+          border-radius: 10px;
+        "
+      >
+        <form>
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            name="firstname"
+            placeholder="Your name"
+            required
+          />
+
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            name="lastname"
+            placeholder="Your last name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input type="text" name="email" placeholder="Your email" /><br
+            requried
+          />
+
+          <label for="text">Subject</label>
+          <textarea
+            name="subject"
+            placeholder="write your issue here"
+            style="height: 200px"
+            required
+          ></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
