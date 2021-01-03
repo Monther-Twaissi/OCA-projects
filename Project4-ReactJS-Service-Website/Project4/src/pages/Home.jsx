@@ -12,6 +12,7 @@ export default function Home() {
       <h1>What We Do?</h1>
       <Servicesbrief />
       <h1>Our Team</h1>
+      <br />
       <Team />
       <h1>Testimonials</h1>
       <Testimonials />

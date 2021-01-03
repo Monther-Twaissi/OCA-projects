@@ -21,6 +21,9 @@ function Booking({ match }) {
   const PhonePick = (e) => {
     sessionStorage.setItem("Phone", e.target.value);
   };
+  const companyPick = (e) => {
+    sessionStorage.setItem("Company", e.target.value);
+  };
 
   return (
     <>
@@ -163,6 +166,7 @@ function Booking({ match }) {
                   type="text"
                   id="companyName"
                   name="companyName"
+                  onChange={companyPick}
                 />
               </div>
               <div className="form-group">

@@ -23,7 +23,7 @@ export default class Testimonials extends Component {
             <h3>Ashraf Al jabari</h3>
             <h4>Designer</h4>
             <p>
-              I highly recommend W-ebSite Services they helped me biuld my own
+              I highly recommend WebSoft Services they helped me biuld my own
               online bussiness.
             </p>
           </div>
@@ -36,7 +36,7 @@ export default class Testimonials extends Component {
           />
           <div className="myCarousel">
             <h3>Razan Zuaiter</h3>
-            <h4>مهننندسههه</h4>
+            <h4>Engineer</h4>
             <p>
               Over the past three years, Our company was very pleased with the
               service provided by WebSoft development teams and executive

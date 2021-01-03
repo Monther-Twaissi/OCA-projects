@@ -3,6 +3,7 @@ import CoverImg from "../Assest/Cover.jpg";
 import PFP_11 from "../Assest/PFP_11.jpg";
 import "../S-Style/CoverProfile.scss";
 import { FaUserEdit } from "react-icons/fa";
+import { RiEditCircleFill } from "react-icons/ri";
 
 class CoverProfile extends Component {
   state = {
@@ -46,7 +47,7 @@ class CoverProfile extends Component {
               />
               <div className="label">
                 <label htmlFor="inputCover" className="image-upload">
-                  <FaUserEdit className="AddImageIconCover" />
+                  <RiEditCircleFill className="AddImageIconCover" />
                 </label>
               </div>
             </div>

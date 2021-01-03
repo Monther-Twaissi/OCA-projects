@@ -43,7 +43,6 @@ const RegisterForm = () => {
   };
   return (
     <div className="container-fluid">
-      {/* Redirect if logged in */}
       {isLoggedIn && <Redirect to="Body" />}
       <div className="RegisterContainer">
         <div className="RegisterDetailes">
@@ -58,12 +57,12 @@ const RegisterForm = () => {
           >
             <h2 className="titleForm">Register</h2>
             <div className="form-group Input">
-              <i class="fas fa-user"></i>
               <input
                 className="Field"
                 type="text"
                 id="userName"
-                placeholder="Type Your Name"
+                style={{ fontFamily: "FontAwesome" }}
+                placeholder="&#xf406; Type Your Name"
                 onChange={handleName}
                 name="userName"
                 ref={register({
@@ -93,12 +92,12 @@ const RegisterForm = () => {
               />
             </div>
             <div className="form-group Input">
-              <i class="fas fa-envelope"></i>
               <input
                 className="Field"
+                style={{ fontFamily: "FontAwesome" }}
                 type="email"
                 id="email"
-                placeholder="Type Your Email Address"
+                placeholder="&#xf0e0; Type Your Email Address"
                 onChange={handleEmail}
                 name="email"
                 ref={register({
@@ -124,12 +123,13 @@ const RegisterForm = () => {
               />
             </div>
             <div className="form-group Input">
-              <i class="fas fa-map-marker-alt"></i>
               <input
                 className="Field"
                 type="text"
                 id="city"
-                placeholder="Type Your City Name"
+                style={{ fontFamily: "FontAwesome" }}
+                placeholder="&#xf3c5;
+                Type Your City Name"
                 onChange={handleCity}
                 name="city"
                 ref={register({
@@ -159,12 +159,13 @@ const RegisterForm = () => {
               />
             </div>
             <div className="form-group Input">
-              <i class="fas fa-key"></i>
               <input
                 className="Field"
                 type="password"
                 id="password"
-                placeholder="Type Your Password"
+                style={{ fontFamily: "FontAwesome" }}
+                placeholder="&#xf084;
+                Type Your Password"
                 onChange={handlePassword}
                 name="password"
                 ref={register({

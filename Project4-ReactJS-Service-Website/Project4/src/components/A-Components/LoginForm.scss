@@ -27,44 +27,41 @@ $FontColor: #2c3fc0;
       }
     }
     .LoginForm {
-      width: 30%;
+      width: 35.5%;
       display: flex;
       justify-content: center;
       align-items: left;
       border: none;
-      background: linear-gradient(180deg, #becee4 0%, #2c3fc0 90%);
-      padding: 0.2rem 0.25rem;
+      border: 2px solid #583d72;
+      box-shadow: #dadada 2px 2px 15px 10px;
+      margin-right: 5%;
+      // background: #583d72;
+      // padding: 0.2rem 0.25rem;
       border-radius: 1rem;
       .login-form {
         padding-top: 2rem;
-        .Input {
-          position: relative;
-          i {
-            position: absolute;
-            padding-left: 10px;
-            top: 35%;
-            left: 2px;
-            font-size: 1rem;
-          }
-        }
+        width: 80%;
+        justify-content: center;
+
         .form-group {
           .Field[name="email"],
           .Field[name="password"] {
-            background-color: #b3c9e9;
-            padding-left: 30px !important;
-            padding-right: 0 !important;
-            width: 90% !important;
-            margin-top: 2.5rem !important;
+            // background-color: #b3c9e9;
+            // padding-left: 30px !important;
+            width: 93% !important;
+            // margin-top: 2.5rem !important;
+            border-bottom: 1px solid #005496;
           }
+
           .Feled {
-            padding: 1.5rem !important;
+            // padding: 1.5rem !important;
             border: none;
             outline: none;
           }
         }
         .form-button {
           .Button {
-            background-color: #b1ddff;
+            background-color: #583d72;
             width: 30%;
             margin: 1rem;
             padding: 5px 5px;
@@ -72,10 +69,10 @@ $FontColor: #2c3fc0;
             outline: none;
             border: none;
             font-weight: 200;
-            color: #333;
+            color: #fff;
           }
           .Button:hover {
-            background-color: #fff;
+            background-color: #fff !important;
             color: #333;
           }
         }
@@ -83,7 +80,11 @@ $FontColor: #2c3fc0;
     }
     .titleForm {
       text-align: center;
-      color: $FontColor;
+      color: #583d72;
+      font-weight: bolder;
+      font-size: 2.5rem;
+      margin-bottom: 30%;
+      margin-top: 10%;
     }
   }
 }
@@ -99,6 +100,7 @@ $FontColor: #2c3fc0;
       }
       .LoginForm {
         width: 97.5%;
+        padding-right: 5px !important;
       }
     }
   }

@@ -27,12 +27,15 @@ $FontColor: #2c3fc0;
       }
     }
     .RegisterForm {
-      width: 30%;
+      width: 35%;
       display: flex;
       justify-content: center;
       align-items: left;
       border: none;
-      background: linear-gradient(180deg, #becee4 0%, #2c3fc0 90%);
+      margin-right: 5%;
+      // background: #055190;
+      border: 2px solid #583d72;
+      box-shadow: 2px 2px 15px 10px #dadada;
       padding: 0.2rem 0.25rem;
       border-radius: 1rem;
       .register-form {
@@ -52,10 +55,11 @@ $FontColor: #2c3fc0;
           .Field[name="email"],
           .Field[name="city"],
           .Field[name="password"] {
-            background-color: #b3c9e9;
+            // background-color: #b3c9e9;
             padding-left: 40px !important;
             padding-right: 0 !important;
             margin-top: 2.5rem !important;
+            border-bottom: 1px solid #583d72;
           }
           .Field {
             // padding: 1.5rem !important;
@@ -65,7 +69,7 @@ $FontColor: #2c3fc0;
         }
         .form-button {
           .Button {
-            background-color: #b1ddff;
+            background-color: #583d72;
             width: 30%;
             margin: 1rem;
             padding: 5px 5px;
@@ -82,7 +86,8 @@ $FontColor: #2c3fc0;
     }
     .titleForm {
       text-align: center;
-      color: $FontColor;
+      font-weight: bolder;
+      color: #583d72;
     }
   }
 }

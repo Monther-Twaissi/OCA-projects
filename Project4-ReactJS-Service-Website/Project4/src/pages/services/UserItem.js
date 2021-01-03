@@ -10,17 +10,19 @@ class UserItem extends Component {
           src={avatar_url}
           alt=""
           className="img-1 round-border"
-          style={{ width: "250px", height: "200px" }}
+          style={{ width: "300px", height: "200px" }}
         />
-        <h3>{service}</h3>
+        <div className="serviceName">
+          <h3>{service}</h3>
+        </div>
         <div>
           <Link to={html_url}>
             <a
               href={html_url}
-              className="btn-Services btn-primary btn-md my-4 round-border fourth"
+              className="btn-Services  my-4  fourth"
               target="_blank"
             >
-              Discuss My Software
+              Book Now
             </a>
           </Link>
         </div>

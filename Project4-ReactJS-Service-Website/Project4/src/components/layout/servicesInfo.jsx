@@ -10,7 +10,7 @@ export default function Servicesbrief(params) {
       <div className="w-image-container">
         <img
           className="w-image"
-          src="https://www.scnsoft.com/blog-pictures/crm-pics/all-in-one-marketing-platforms.png"
+          src="https://media.discordapp.net/attachments/783242964762624015/785581489991581726/do-front-and-back-end-web-development.png?width=847&height=476"
           alt=""
         ></img>
       </div>
@@ -24,13 +24,13 @@ export default function Servicesbrief(params) {
           website that is designed to perform in today’s competitive
           marketplace.
         </p>
-        <button className="w-info-item btn-nav-item">
+        <button className="w-info-item fourth">
           {/* <Link to="/" className="w-info-links btn-info">
             Show More
           </Link> */}
           <Link
             to={isLoggedIn ? "services" : "Login"}
-            className="w-info-links btn-info"
+            className="w-newLink "
             // onClick={closeMobileMenu}
           >
             Show More

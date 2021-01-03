@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Video from "../../videos/video-2.mp4";
+import Video from "../../videos/video-2_3.mp4";
 import "./bgVideo.css";
 
 export default function BackgroundVideo() {

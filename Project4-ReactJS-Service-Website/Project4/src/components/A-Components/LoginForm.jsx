@@ -42,37 +42,30 @@ const LoginForm = () => {
       <div className="LoginContainer">
         <div className="LoginDetailes">
           <img src={Img} className="Img" alt="Login Image" />
-          <Link to="/registerform">
-            <div>
-              <a href="#" className="signup-image-link">
-                Create an account
-              </a>
-            </div>
-          </Link>
         </div>
         <div className="LoginForm">
           <form action="" method="POST" className="login-form">
             <h2 className="titleForm">Login</h2>
             <div className="form-group Input">
-              <i className="fas fa-envelope"></i>
               <input
                 type="email"
                 id="email"
                 className="Field"
-                placeholder="Type Your Email Address"
+                placeholder="&#xf0e0; Type Your Email Address"
                 name="email"
                 onChange={onEmailChange}
+                style={{ fontFamily: "FontAwesome" }}
               />
             </div>
             <div className="form-group Input">
-              <i className="fas fa-key"></i>
               <input
                 type="password"
                 id="password"
                 className="Field"
-                placeholder="Type Your Password"
+                placeholder="&#xf084; Type Your Password"
                 name="password"
                 onChange={onPasswordChange}
+                style={{ fontFamily: "FontAwesome" }}
               />
             </div>
             {errors != false && (
@@ -88,6 +81,14 @@ const LoginForm = () => {
               >
                 Sign In
               </button>
+              <div>Or</div>
+              <Link to="/registerform">
+                <div>
+                  <a href="#" className="signup-image-link">
+                    Create an account
+                  </a>
+                </div>
+              </Link>
             </div>
           </form>
         </div>

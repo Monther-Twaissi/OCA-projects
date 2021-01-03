@@ -29,9 +29,9 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+/* a:hover {
   color: #666;
-}
+} */
 
 ul {
   list-style: none;
@@ -117,20 +117,29 @@ ul {
 
 /* Cards */
 .m-card {
-  /* width: 100%; */
-  /* flex-direction: column; */
-  /* display: flex; */
+  width: 90%;
+  display: flex;
+  flex-direction: column;
   /* flex-wrap: wrap; */
-  /* justify-content: space-evenly; */
+  align-items: center;
+  justify-content: center;
   padding: 1rem;
   border: #ccc 1px dotted;
-  margin: 0.7rem 0;
+  margin: 0.7rem auto;
   border-radius: 10px;
+  /* width: 26%; */
   /* box-shadow: var(--button-color) 1px 1px 2px 2px; */
 }
 .m-card:hover {
   box-shadow: #dadada 0.5px 0.5px 10px 0.8px;
   /* transform: translateY(2%); */
+}
+.serviceItem {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin: 0 13% 0 13%;
+  /* width: 30%; */
 }
 
 /* List */
@@ -191,7 +200,7 @@ ul {
   margin: 2rem 0;
 }
 .my-3 {
-  margin: 0 15% 0 15%;
+  margin: 0 10% 0 10%;
 }
 .my-4 {
   margin: 2rem 0 0 0;
@@ -218,8 +227,8 @@ ul {
 
 .btn-Services {
   display: inline-block;
-  background: var(--light-color);
-  color: #333;
+  background: #583d72 !important;
+  color: #fff;
   padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
@@ -227,6 +236,7 @@ ul {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 10px !important;
 }
 
 .btn-link {
@@ -314,11 +324,11 @@ ul {
   border: #ccc solid 1px;
 }
 
-.btn:hover {
+/* .btn:hover {
   opacity: 0.6;
   background-color: var(--primary-color);
   color: white;
-}
+} */
 
 .bg-light,
 .badge-light {
@@ -436,8 +446,25 @@ table th {
     text-align: center;
     justify-content: center;
   }
+  .serviceItem {
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+
+    /* width: 30%; */
+  }
 }
 
 .round-border {
   border-radius: 10px;
+}
+.serviceName {
+  width: 110%;
+}
+@media screen and (min-width: 767px) and (max-width: 1100px) {
+  .serviceItem {
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+
+    /* width: 30%; */
+  }
 }

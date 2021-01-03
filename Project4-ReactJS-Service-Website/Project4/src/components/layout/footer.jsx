@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import Logo from "../../images/Logo1.png";
+import Logo from "../../images/Logo1.gif";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -38,7 +38,11 @@ function Footer() {
         <div className="social-media-wrap">
           <div className="footer-logo">
             <Link to="/" className="social-logo">
-              <img src={Logo} alt="Website Logo"></img>
+              <img
+                src={Logo}
+                alt="Website Logo"
+                style={{ width: "45px", height: "40px", marginRight: "0.2rem" }}
+              ></img>
               ebSoft
             </Link>
           </div>

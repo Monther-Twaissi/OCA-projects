@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../../images/Logo1.png";
+import Logo from "../../images/Logo1.gif";
 import "./navbar.css";
 import { Link, withRouter } from "react-router-dom";
 // import { UseContext } from "../../UseContext";
@@ -32,7 +32,12 @@ function Navbar(props) {
       <nav className="w-navbar">
         <div className="w-navbar-container">
           <Link to="/" className="w-navbar-logo">
-            <img src={Logo} alt="Website logo"></img>ebSoft
+            <img
+              src={Logo}
+              alt="Website logo"
+              style={{ width: "45px", height: "40px", marginRight: "0.2rem" }}
+            ></img>
+            ebSoft
           </Link>
           <div className="w-menu-icon" onClick={handelClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
@@ -74,7 +79,7 @@ function Navbar(props) {
               <li className="w-nav-item">
                 <button className="btn-NavBar">
                   <Link to="Login" onClick={closeMobileMenu}>
-                    LogIn
+                    Login
                   </Link>
                 </button>
               </li>

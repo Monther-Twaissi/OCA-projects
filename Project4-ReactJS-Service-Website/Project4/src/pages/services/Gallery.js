@@ -11,7 +11,7 @@ import {
 
 const Gallery = () => {
   return (
-    <MDBContainer className="container-fluid">
+    <MDBContainer className="container-fluid" style={{ marginTop: "3.8%" }}>
       <MDBCarousel
         activeItem={1}
         length={3}
@@ -24,7 +24,7 @@ const Gallery = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://www.scnsoft.com/blog-pictures/crm-pics/call-center-automation.png"
+                src="https://media.discordapp.net/attachments/783242964762624015/785587543638802432/sdf.png?width=1028&height=441"
                 alt="First slide"
               />
               <MDBMask overlay="black-light" />
@@ -38,7 +38,7 @@ const Gallery = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://www.scnsoft.com/blog-pictures/crm-pics/all-in-one-marketing-platforms.png"
+                src="https://media.discordapp.net/attachments/783242964762624015/785585354865639474/sds.png?width=1028&height=441"
                 alt="Second slide"
               />
               <MDBMask overlay="black-strong" />
@@ -52,7 +52,7 @@ const Gallery = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="https://www.scnsoft.com/blog-pictures/web-portals/website-vs-web-portal.png"
+                src="https://apluscourses.com/wp-content/uploads/2020/06/The-Evolution-Of-Web-Development.jpg"
                 alt="Third slide"
               />
               <MDBMask overlay="black-slight" />

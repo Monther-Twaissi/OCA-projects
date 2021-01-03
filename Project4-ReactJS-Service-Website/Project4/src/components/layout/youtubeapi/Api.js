@@ -33,7 +33,7 @@ class YoutubeAPI extends React.Component {
             marginBottom: "1rem",
           }}
         >
-          Know About Our Teaching Channel
+          More Details About Our Wourk
         </h3>
         <div className="w-youtubeVideos">{renderedVideos}</div>
       </div>
