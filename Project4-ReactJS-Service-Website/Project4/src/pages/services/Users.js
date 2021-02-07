@@ -66,14 +66,6 @@ class Users extends Component {
     );
   }
 }
-// const userStyle = {
-//   // width: "25vw",
-//   display: "flex",
-//   flexWrap: "wrap",
-//   justifyContent: "center",
-//   alignItems: "center",
-//   gridGap: "2rem",
-//   padding: "2rem",
-// };
+
 export default Users;
-// style={userStyle} className="my-3"
+

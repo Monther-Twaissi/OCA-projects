@@ -32,7 +32,6 @@ function App() {
           <Route path="/details/:language" component={Booking} />
         </Switch>
         <Footer />
-
         {/* </UseContext.Provider> */}
       </div>
     </Router>

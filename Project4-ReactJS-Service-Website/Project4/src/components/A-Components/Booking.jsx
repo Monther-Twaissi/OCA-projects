@@ -27,19 +27,12 @@ function Booking({ match }) {
 
   return (
     <>
-      {/* <Link to="/" className="btn btn-success mb-5">
-        &#11207; Back to Home
-      </Link> */}
-      {/* <h1>{lang}</h1> */}
-      {/* <p className="lead">Detailed information about the {lang} language.</p> */}
+      
       <div className="container-fluid">
         <div className="bookingContainer">
           <div className="BookingDetailes">
             <img src={Img} className="Img" alt="Ser" />
             <BookingInfo lang={lang} />
-            {/* <h3>Heading</h3>
-            <p>Test</p>
-            <p>Test</p> */}
           </div>
           <div className="BookingForm">
             <form
