@@ -135,6 +135,10 @@ $adminSet = mysqli_fetch_assoc($result);
                             <a href="manage_products.php">
                                 <i class="fas fa-chart-bar"></i>Manage Products </a>
                         </li>
+                        <li>
+                            <a href="manage_products.php">
+                                <i class="fas fa-home"></i>Manage Products </a>
+                        </li>
                     </ul>
                 </nav>
             </div>

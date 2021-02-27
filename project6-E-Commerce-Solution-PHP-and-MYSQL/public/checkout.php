@@ -63,12 +63,7 @@ $item_name = 1;
 $item_number = 1;
 $amount = 1;
 $quantity = 1;
-
-
-
 ?>
-
-
 
 <!-- Paybal -->
 <!--================Checkout Area =================-->
