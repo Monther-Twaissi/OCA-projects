@@ -25,8 +25,11 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::resource('product', 'SingleProdcutController');
 Route::resource('index', 'PublicController');
-Route::resource('shop', 'ShopController');
+Route::resource('/', 'PublicController');
 Route::resource('category', 'CategoryProducts');
+
+Route::resource('shop', 'ShopController');
+Route::post('/search', 'ShopController@search');
 
 Route::view('/about', 'pages.about');
 Route::view('/contact', 'pages.contact');
@@ -45,7 +48,11 @@ Route::view('userReg', 'pages.userReg');
 Route::resource('checkout', 'OrdersController');
 Route::view('userLog', 'pages.userLog');
 Route::get('logout', 'customerController@logout');
-
+Route::view('thankyou', 'pages.thankYou');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('paywithpaypal', array('as' => 'paywithpaypal', 'uses' => 'PaypalController@payWithPaypal'));
+Route::post('paypal', array('as' => 'paypal', 'uses' => 'PaypalController@postPaymentWithpaypal'));
+Route::get('paypal', array('as' => 'status', 'uses' => 'PaypalController@getPaymentStatus'));

@@ -19,9 +19,11 @@ class OrdersController extends Controller
      */
     public function index()
     {
-        // $orders = Order::all();
-        // dd($orders[0]->name);
-        return view('pages.checkout');
+        if (isset(auth()->user()->id)) {
+            return view('pages.checkout');
+        } else {
+            return redirect('login');
+        }
     }
 
     /**
@@ -59,7 +61,8 @@ class OrdersController extends Controller
             $orderPro->quantity = $value['quantity'];
             $orderPro->save();
         };
-        return back()->with('Success', 'Order has been placed');
+        session()->forget('cart');
+        return view('pages.thankYou')->with('Success', 'Order has been placed');
     }
 
     /**

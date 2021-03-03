@@ -8,7 +8,7 @@
                 <div class="breadcrumb-content position-relative section-content">
                     <h3 class="title-3">Login-Register</h3>
                     <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><a href="index">Home</a></li>
                         <li>Login-Register</li>
                     </ul>
                 </div>
@@ -63,14 +63,18 @@
                                             {{ __('Remember Me') }}
                                         </label>
                                     </div>
+                                    <div class="form-check mt-4">
+
+
+                                        If you do not have an account, <a href='register'>Register</a>
+                                    </div>
+
+
                                 </div>
-                                @if (Route::has('password.request'))
-                                <a class="forget-pwd mb-3" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                                @endif
+
                             </div>
                         </div>
+
 
                         <div class="center">
 
@@ -80,6 +84,7 @@
 
 
                         </div>
+
                     </form>
 
                 </div>

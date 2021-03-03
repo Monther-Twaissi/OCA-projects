@@ -12,7 +12,7 @@
         </div>
         @endif
         <div class="card-body card-block">
-            <form action="{{ route('category.update', $category->cat_id) }}" method="post" class="" enctype="multipart/form-data">
+            <form action="{{ route('manageCategory.update', $category->cat_id) }}" method="post" class="" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
 
@@ -41,8 +41,9 @@
                     </div>
                 </div>
 
-                <div class="form-actions form-group">
-                    <button type="submit" class="btn btn-success btn-sm" name="submit">Submit</button>
+                <div>
+                    <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" name="submit">Update
+                    </button>
                 </div>
             </form>
         </div>

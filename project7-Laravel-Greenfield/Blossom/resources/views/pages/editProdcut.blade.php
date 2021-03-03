@@ -16,11 +16,11 @@
                     @endif
                     <div class="card-body">
                         <div class="card-title">
-                            <h3 class="text-center title-2">Create Product</h3>
+                            <h3 class="text-center title-2">Edit Product</h3>
                         </div>
                         <hr>
 
-                        <form action="{{ route('product.update', $product->pro_id) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('manageProduct.update', $product->pro_id) }}" method="post" enctype="multipart/form-data">
 
                             {{ csrf_field() }}
                             @method('PATCH')
@@ -98,7 +98,7 @@
                             </div>
 
                             <div>
-                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" name="submit">Add
+                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" name="submit">Update
                                 </button>
                             </div>
                         </form>

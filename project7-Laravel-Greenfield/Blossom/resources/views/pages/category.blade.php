@@ -2,7 +2,7 @@
 @section('content')
 <div class="col-lg-12">
     <div class="card">
-        <div class="card-header">Create Admin</div>
+        <div class="card-header">Manage Categories</div>
         @if ($errors->any())
         <div class="alert alert-danger">
             @foreach ($errors->all() as $error)
@@ -12,7 +12,7 @@
         </div>
         @endif
         <div class="card-body card-block">
-            <form action="category" method="post" class="" enctype="multipart/form-data">
+            <form action="manageCategory" method="post" class="" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <div class="input-group">
@@ -37,18 +37,20 @@
                         </div>
                         <input name="category_image" type="file" class="form-control" placeholder="Add Image">
                     </div>
+
+                </div>
+                <div>
+                    <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" name="submit" style="background-color: #E72463;">Create
+                    </button>
                 </div>
 
-                <div class="form-actions form-group">
-                    <button type="submit" class="btn btn-success btn-sm" name="submit">Submit</button>
-                </div>
             </form>
         </div>
     </div>
     <div class="row align-items-center justify-content-center">
         <div class="col-md-12">
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">Admins Table</h3>
+            <h3 class="title-5 m-b-35">Categories Table</h3>
             <div class="table-responsive table-responsive-data2">
                 <table class="table table-data2">
                     <thead>
@@ -57,7 +59,8 @@
                             <th>Category name</th>
                             <th>Category Description</th>
                             <th>Category Image</th>
-                            <th></th>
+                            <th>Edit | Delete</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -73,30 +76,31 @@
                                     <img src="images/{{$category->category_image}}">
                                 </div>
                             </td>
-                            <td>
+                            <td style="display: flex; justify-content:space-around">
                                 <div class="table-data-feature">
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                        <i class="zmdi zmdi-mail-send"></i>
-                                    </button>
-                                    <a href="{{ route('category.edit', $category->cat_id)}}">
+
+                                    <a href="{{ route('manageCategory.edit', $category->cat_id)}}">
                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                             <i class="zmdi zmdi-edit"></i> </button>
                                     </a>
                                 </div>
-                            <td>
-                                <form action="{{ route('category.destroy', $category->cat_id)}}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="zmdi zmdi-delete"></i> </button>
-                                </form>
-                            </td>
+
+                                <div style="margin-left: 10px;" class="table-data-feature">
+
+                                    <form action="{{ route('manageCategory.destroy', $category->cat_id)}}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i> </button>
+                                    </form>
+                                </div>
+
 
 
 
                             </td>
                         </tr>
-                        <tr class="spacer"></tr>
+
                         @endforeach
                     </tbody>
                 </table>

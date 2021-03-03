@@ -10,7 +10,7 @@
         <div class="breadcrumb-content position-relative section-content">
           <h3 class="title-3">Shop Sidebar</h3>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index">Home</a></li>
             <li>Shop</li>
           </ul>
         </div>
@@ -59,7 +59,7 @@
                   <div class="price-box">
                     <span class="regular-price">JOD {{$value->product_price}}</span>
                   </div>
-                  <a href="{{route('cart.show',$value->pro_id)}}" class="btn product-cart">Add to Cart</a>
+                  <a href="{{route('cart.show',$value->pro_id)}}" class="btn product-cart p-1" style="background-color:#E72463 ; color:white">Add to Cart</a>
                 </div>
                 <div class="product-content-listview">
                   <div class="product-title">
@@ -115,7 +115,7 @@
 
 
             <div class="widget-list widget-mb-3">
-              <h3 class="widget-title">Tags</h3>
+              <h3 class="widget-title">Categories</h3>
               <div class="sidebar-body">
                 @foreach ($categories as $category =>$value)
 

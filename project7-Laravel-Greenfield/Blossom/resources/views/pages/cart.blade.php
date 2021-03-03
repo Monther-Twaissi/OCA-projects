@@ -10,7 +10,7 @@
                 <div class="breadcrumb-content position-relative section-content">
                     <h3 class="title-3">Shopping Cart</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index">Home</a></li>
                         <li>Shopping Cart</li>
                     </ul>
                 </div>
@@ -35,17 +35,17 @@
                                 <th class="pro-price">Price</th>
                                 <th class="pro-quantity">Quantity</th>
                                 <th class="pro-subtotal">Total</th>
-                                <th class="pro-remove">Update</th>
+
                                 <th class="pro-remove">Remove</th>
                             </tr>
 
                         </thead>
                         <tbody>
 
-                            {{$total = 0}}
+                            <?php $total = 0 ?>
                             @if(session('cart'))
                             @foreach(session('cart') as $id => $details)
-                            {{$total += $details['price'] * $details['quantity'] }}
+                            <?php $total += $details['price'] * $details['quantity'] ?>
 
                             <tr>
                                 <td class="pro-thumbnail"><a href="#"><img class="img-fluid" src="/images/{{$details['photo']}}" alt="Product" /></a></td>
@@ -62,8 +62,8 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="pro-subtotal"><span>JOD${{ $details['price'] * $details['quantity'] }}</span></td>
-                                <td class="pro-remove"><a class="update-cart" data-id="{{ $id }}" href=" #"><i class="lnr lnr-trash"></i></a></td>
+                                <td class="pro-subtotal"><span>JOD{{ $details['price'] * $details['quantity'] }}</span></td>
+
                                 <td class="pro-remove"><a data-id="{{ $id }}" class="remove-from-cart" href="#"><i class="lnr lnr-trash"></i></a></td>
                             </tr>
                             @endforeach
@@ -96,7 +96,7 @@
                             </table>
                         </div>
                     </div>
-                    <a href="checkout.html" class="btn flosun-button primary-btn rounded-0 black-btn w-100">Proceed To Checkout</a>
+                    <a href="checkout" class="btn flosun-button primary-btn rounded-0 black-btn w-100">Proceed To Checkout</a>
                 </div>
             </div>
         </div>
@@ -132,24 +132,7 @@
     })
 
 
-    $(".update-cart").click(function(e) {
 
-        e.preventDefault();
-        var ele = $(this);
-        console.log("Update");
-        $.ajax({
-            url: '{{ url("update-cart") }}',
-            method: "put",
-            data: {
-                _token: '{{ csrf_token() }}',
-                id: ele.attr("data-id"),
-                quantity: ele.parents("tr").find(".cart-plus-minus-box").val()
-            },
-            success: function(response) {
-                window.location.reload();
-            }
-        });
-    });
     $(".remove-from-cart").click(function(e) {
         e.preventDefault();
         var ele = $(this);

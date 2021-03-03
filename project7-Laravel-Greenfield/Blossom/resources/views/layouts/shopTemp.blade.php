@@ -66,38 +66,52 @@
                         <nav class="main-nav d-none d-lg-flex">
                             <ul class="nav">
                                 <li>
-                                    <a href="index">
+                                    <a href="{{route('index.index')}}">
                                         <span class="menu-text"> Home</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="shop">
+                                    <a href="/shop">
                                         <span class="menu-text">Shop</span>
 
                                     </a>
 
                                 </li>
                                 <li>
-                                    <a href="my-account">
-                                        <span class="menu-text"> My Account</span>
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                    <ul class="dropdown-submenu dropdown-hover">
 
-                                        <li><a href="userLog">Login</a></li>
-                                        <li><a href="userReg">Register</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="about">
+                                    <a href="/about">
                                         <span class="menu-text"> About Us</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="contact">
+                                    <a href="/contact">
                                         <span class="menu-text">Contact Us</span>
                                     </a>
                                 </li>
+                                <?php
+                                if (isset(auth()->user()->id)) {
+                                    $customerId = auth()->user()->id;
+                                } else {
+                                    $customerId = 0;
+                                }
+                                ?>
+
+                                @if(isset(auth()->user()->id))
+
+                                <li>
+                                    <a href="/account">
+                                        <span class="menu-text">profile</span>
+
+                                    </a>
+
+                                </li>
+                                <li><a href="logout"><span class="menu-text"> Logout</span></a></li>
+                                @else
+
+                                <li><a href="login"><span class="menu-text"> Login</span></a></li>
+                                <li><a href="register"><span class="menu-text"> Register</span></a></li>
+                                @endif
+
                             </ul>
                         </nav>
                     </div>
@@ -107,21 +121,27 @@
                                 <li class="minicart-wrap">
                                     <a href="#" class="minicart-btn toolbar-btn">
                                         <i class="fa fa-shopping-cart"></i>
-                                        <span class="cart-item_count">3</span>
+                                        <span class="cart-item_count">{{ count((array) session('cart')) }}</span>
                                     </a>
+                                    <?php $total = 0 ?>
+                                    @foreach((array) session('cart') as $id => $details)
+                                    <?php $total += $details['price'] * $details['quantity'] ?>
+                                    @endforeach
                                     <div class="cart-item-wrapper dropdown-sidemenu dropdown-hover-2">
+                                        @if(session('cart'))
+                                        @foreach(session('cart') as $id => $details)
                                         <div class="single-cart-item">
                                             <div class="cart-img">
-                                                <a href="cart.html"><img src="assets/images/cart/1.jpg" alt="" /></a>
+                                                <a href="cart.html"><img src="images/{{ $details['photo'] }}" alt="" /></a>
                                             </div>
                                             <div class="cart-text">
                                                 <h5 class="title">
-                                                    <a href="cart.html">Odio tortor consequat</a>
+                                                    <a href="cart.html">{{ $details['name'] }}</a>
                                                 </h5>
                                                 <div class="cart-text-btn">
                                                     <div class="cart-qty">
-                                                        <span>1×</span>
-                                                        <span class="cart-price">$98.00</span>
+                                                        <span>{{ $details['quantity'] }}×</span>
+                                                        <span class="cart-price">JOD {{ $details['price'] }}</span>
                                                     </div>
                                                     <button type="button">
                                                         <i class="ion-trash-b"></i>
@@ -129,49 +149,21 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        @endforeach
+                                        @endif
 
-                                        <div class="single-cart-item">
-                                            <div class="cart-img">
-                                                <a href="cart.html"><img src="assets/images/cart/3.jpg" alt="" /></a>
-                                            </div>
-                                            <div class="cart-text">
-                                                <h5 class="title">
-                                                    <a href="cart.html">Eleifend quam</a>
-                                                </h5>
-                                                <div class="cart-text-btn">
-                                                    <div class="cart-qty">
-                                                        <span>1×</span>
-                                                        <span class="cart-price">$98.00</span>
-                                                    </div>
-                                                    <button type="button">
-                                                        <i class="ion-trash-b"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                         <div class="cart-price-total d-flex justify-content-between">
                                             <h5>Total :</h5>
-                                            <h5>$166.00</h5>
+                                            <h5>JOD {{ $total }}</h5>
                                         </div>
                                         <div class="cart-links d-flex justify-content-between">
-                                            <a class="btn product-cart button-icon flosun-button dark-btn" href="cart.html">View cart</a>
-                                            <a class="btn flosun-button secondary-btn rounded-0" href="checkout.html">Checkout</a>
+                                            <a class="btn product-cart button-icon flosun-button dark-btn" href="cart">View cart</a>
+                                            <a class="btn flosun-button secondary-btn rounded-0" href="checkout">Checkout</a>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="sidemenu-wrap">
-                                    <a href="#"><i class="fa fa-search"></i> </a>
-                                    <ul class="dropdown-sidemenu dropdown-hover-2 dropdown-search">
-                                        <li>
-                                            <form action="#">
-                                                <input name="search" id="search" placeholder="Search" type="text" />
-                                                <button type="submit">
-                                                    <i class="fa fa-search"></i>
-                                                </button>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
+
                                 <li class="account-menu-wrap d-none d-lg-flex">
                                     <a href="#" class="off-canvas-menu-btn">
                                         <i class="fa fa-bars"></i>
@@ -197,21 +189,16 @@
                     <i class="fa fa-times"></i>
                 </div>
                 <div class="off-canvas-inner">
-                    <div class="search-box-offcanvas">
-                        <form>
-                            <input type="text" placeholder="Search product..." />
-                            <button class="search-btn"><i class="fa fa-search"></i></button>
-                        </form>
-                    </div>
+
                     <!-- mobile menu start -->
                     <div class="mobile-navigation">
                         <!-- mobile menu navigation start -->
                         <nav>
                             <ul class="mobile-menu">
                                 <li class="menu-item-has-children">
-                                    <a href="#">Home</a>
+                                    <a href="index">Home</a>
                                     <ul class="dropdown">
-                                        <li><a href="index.html">Home Page 1</a></li>
+                                        <li><a href="index">Home Page 1</a></li>
                                         <li><a href="index-2.html">Home Page 2</a></li>
                                         <li><a href="index-3.html">Home Page 3</a></li>
                                         <li><a href="index-4.html">Home Page 4</a></li>
@@ -221,7 +208,7 @@
                                     <a href="#">Shop</a>
                                     <ul class="megamenu dropdown">
                                         <li class="mega-title has-children">
-                                            <a href="#">Shop</a>
+                                            <a href="shop">Shop</a>
 
                                         </li>
                                         <li class="mega-title has-children">
@@ -234,16 +221,17 @@
 
                                 <li class="menu-item-has-children">
                                     <a href="#">Pages</a>
-                                    {{$customerId = auth()->user()->id}}
+
+
                                     <ul class="dropdown">
-                                        <li><a href="frequently-questions.html">FAQ</a></li>
+
                                         <li><a href="{{route('account.index', $customerId)}}">My Account</a></li>
                                         <li>
-                                            <a href="login-register.html">login &amp; register</a>
+                                            <a href="login">login &amp; register</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="about-us.html">About Us</a></li>
+                                <li><a href="about">About Us</a></li>
 
                             </ul>
                         </nav>

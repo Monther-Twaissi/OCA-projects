@@ -93,7 +93,7 @@ class customerController extends Controller
 
     function logout()
     {
-        session()->forget('user');
-        return redirect('userLog');
+        session()->flush('user');
+        return redirect('index');
     }
 }

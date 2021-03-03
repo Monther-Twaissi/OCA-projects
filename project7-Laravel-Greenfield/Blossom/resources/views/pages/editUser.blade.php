@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
-                    <div class="card-header">Manage Product</div>
+                    <div class="card-header">Manage Users</div>
                     @if ($errors->any())
                     <div class="alert alert-danger">
                         @foreach ($errors->all() as $error)
@@ -16,7 +16,7 @@
                     @endif
                     <div class="card-body">
                         <div class="card-title">
-                            <h3 class="text-center title-2">Create Product</h3>
+                            <h3 class="text-center title-2">Update User</h3>
                         </div>
                         <hr>
 
@@ -81,7 +81,7 @@
                             </div>
 
                             <div>
-                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" name="submit">Add
+                                <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" name="submit">Update
                                 </button>
                             </div>
                         </form>

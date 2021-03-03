@@ -90,16 +90,18 @@
                 </div>
             </div>
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">Admins Table</h3>
+            <h3 class="title-5 m-b-35">Users Table</h3>
             <div class="table-responsive table-responsive-data2">
-                <table class="table table-data2">
+                <table class="table table-data2 ">
                     <thead>
                         <tr>
-                            <th> name</th>
-                            <th>email</th>
-                            <th> phone</th>
-                            <th> Image</th>
-                            <th></th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>User Type</th>
+                            <th>Image</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -111,7 +113,7 @@
 
                             <td>{{$value->name}}</td>
                             <td>{{$value->email}}</td>
-                            <td>{{$value->phone}}</td>
+                            <td>{{$value->role}}</td>
                             <td>
                                 <div class="image img-cir img-40">
                                     <img src="images/{{$value->image}}">
@@ -119,25 +121,24 @@
                             </td>
                             <td>
                                 <div class="table-data-feature">
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                        <i class="zmdi zmdi-mail-send"></i>
-                                    </button>
+
                                     <a href="{{ route('user.edit', $value->id)}}">
                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                             <i class="zmdi zmdi-edit"></i> </button>
                                     </a>
                                 </div>
-                            <td>
-                                <form action="{{ route('user.destroy', $value->id)}}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="zmdi zmdi-delete"></i> </button>
-                                </form>
                             </td>
+                            <td>
+                                <div class="table-data-feature">
+                                    <form action=" {{ route('user.destroy', $value->id)}}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class=" zmdi zmdi-delete"></i> </button>
+                                    </form>
+                                </div>
                             </td>
                         </tr>
-                        <tr class="spacer"></tr>
                         @endforeach
                     </tbody>
                 </table>

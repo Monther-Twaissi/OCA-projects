@@ -20,7 +20,7 @@
                             <h3 class="text-center title-2">Create Product</h3>
                         </div>
                         <hr>
-                        <form action="product" method="post" enctype="multipart/form-data">
+                        <form action="manageProduct" method="post" enctype="multipart/form-data">
                             {{ csrf_field() }}
                             @csrf
 
@@ -98,7 +98,7 @@
 
 
                             <div>
-                                <button type="submit" class="btn btn-lg btn-info btn-block" name="submit">Add
+                                <button type="submit" class="btn btn-lg btn-info btn-block" name="submit">Create
                                 </button>
                             </div>
                         </form>
@@ -106,18 +106,17 @@
                 </div>
             </div>
             <!-- DATA TABLE -->
-            <h3 class="title-5 m-b-35">Admins Table</h3>
+            <h3 class="title-5 m-b-35">Products Table</h3>
             <div class="table-responsive table-responsive-data2">
                 <table class="table table-data2">
                     <thead>
                         <tr>
                             <th>Category name</th>
-                            <th>product name</th>
-                            <th>product Description</th>
-                            <th>product Price</th>
-
-                            <th>product Image</th>
-                            <th></th>
+                            <th>Product name</th>
+                            <th>Product Description</th>
+                            <th>Product Price</th>
+                            <th>Product Image</th>
+                            <th>Edit | Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -138,24 +137,24 @@
                                     <img src="images/{{$value->product_image}}">
                                 </div>
                             </td>
-                            <td>
+                            <td style="display: flex; justify-content:space-around">
                                 <div class="table-data-feature">
-                                    <button class="item" data-toggle="tooltip" data-placement="top" title="Send">
-                                        <i class="zmdi zmdi-mail-send"></i>
-                                    </button>
-                                    <a href="{{ route('product.edit', $value->cat_id)}}">
+
+                                    <a href="{{ route('manageProduct.edit', $value->cat_id)}}">
                                         <button class="item" data-toggle="tooltip" data-placement="top" title="Edit">
                                             <i class="zmdi zmdi-edit"></i> </button>
                                     </a>
                                 </div>
-                            <td>
-                                <form action="{{ route('product.destroy', $value->cat_id)}}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
-                                        <i class="zmdi zmdi-delete"></i> </button>
-                                </form>
-                            </td>
+
+                                <div style="margin-left: 10px;" class="table-data-feature">
+                                    <form action="{{ route('manageProduct.destroy', $value->cat_id)}}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="item" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <i class="zmdi zmdi-delete"></i> </button>
+                                    </form>
+                                </div>
+
                             </td>
                         </tr>
                         <tr class="spacer"></tr>

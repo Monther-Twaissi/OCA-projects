@@ -42,12 +42,20 @@ class ShopController extends Controller
 
         $categories = Category::all();
 
-        $products = Product::select('product_name', 'product_image', 'product_price')
+
+
+        $product = DB::table('categories')
+            ->join('products', 'categories.cat_id', '=', 'products.cat_id')
+            ->select('categories.category_name', 'products.*')
+            ->get();
+
+        $products = Product::query('product_name', 'product_image', 'product_price')
             ->where('product_name', 'LIKE', "%{$search}%")
             ->get();
 
         //dd($search);
-        return view('pages.shop', compact('products', 'categories'));
+
+        return view('pages.shop', compact('products', 'product', 'categories'));
     }
     /**
      * Store a newly created resource in storage.

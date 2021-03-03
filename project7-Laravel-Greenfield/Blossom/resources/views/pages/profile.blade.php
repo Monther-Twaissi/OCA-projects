@@ -9,7 +9,7 @@
                  <div class="breadcrumb-content position-relative section-content">
                      <h3 class="title-3">My Account</h3>
                      <ul>
-                         <li><a href="index.html">Home</a></li>
+                         <li><a href="index">Home</a></li>
                          <li>My Account</li>
                      </ul>
                  </div>
@@ -32,11 +32,11 @@
                                  <a href="#dashboad" class="active" data-toggle="tab"><i class="fa fa-dashboard"></i>
                                      Dashboard</a>
                                  <a href="#orders" data-toggle="tab"><i class="fa fa-cart-arrow-down"></i> Orders</a>
-                                 <a href="#download" data-toggle="tab"><i class="fa fa-cloud-download"></i> Download</a>
-                                 <a href="#payment-method" data-toggle="tab"><i class="fa fa-credit-card"></i> Payment Method</a>
-                                 <a href="#address-edit" data-toggle="tab"><i class="fa fa-map-marker"></i> address</a>
+
+
+
                                  <a href="#account-info" data-toggle="tab"><i class="fa fa-user"></i> Account Details</a>
-                                 <a href="login"><i class="fa fa-sign-out"></i> Logout</a>
+                                 <a href="logout"><i class="fa fa-sign-out"></i> Logout</a>
                              </div>
                          </div>
                          <!-- My Account Tab Menu End -->
@@ -49,7 +49,7 @@
                                      <div class="myaccount-content">
                                          <h3>Dashboard</h3>
                                          <div class="welcome">
-                                             <p>Hello, <strong>{{$userId['name']}}</strong> (If Not <strong>{{$userId['name']}} !</strong><a href="logout2" class="logout"> Logout</a>)</p>
+                                             <p>Hello, <strong>{{$userId['name']}}</strong> (If Not <strong>{{$userId['name']}} !</strong><a href="logout" class="logout"> Logout</a>)</p>
                                          </div>
                                          <p class="mb-0">From your account dashboard. you can easily check & view your recent orders, manage your shipping and billing addresses and edit your password and account details.</p>
                                      </div>
@@ -90,61 +90,15 @@
                                  <!-- Single Tab Content End -->
 
                                  <!-- Single Tab Content Start -->
-                                 <div class="tab-pane fade" id="download" role="tabpanel">
-                                     <div class="myaccount-content">
-                                         <h3>Downloads</h3>
-                                         <div class="myaccount-table table-responsive text-center">
-                                             <table class="table table-bordered">
-                                                 <thead class="thead-light">
-                                                     <tr>
-                                                         <th>Product</th>
-                                                         <th>Date</th>
-                                                         <th>Expire</th>
-                                                         <th>Download</th>
-                                                     </tr>
-                                                 </thead>
-                                                 <tbody>
-                                                     <tr>
-                                                         <td>Haven - Free Real Estate PSD Template</td>
-                                                         <td>Aug 22, 2018</td>
-                                                         <td>Yes</td>
-                                                         <td><a href="#" class="btn flosun-button secondary-btn theme-color  rounded-0"><i class="fa fa-cloud-download mr-2"></i>Download File</a></td>
-                                                     </tr>
-                                                     <tr>
-                                                         <td>HasTech - Profolio Business Template</td>
-                                                         <td>Sep 12, 2018</td>
-                                                         <td>Never</td>
-                                                         <td><a href="#" class="btn flosun-button secondary-btn theme-color  rounded-0"><i class="fa fa-cloud-download mr-2"></i>Download File</a></td>
-                                                     </tr>
-                                                 </tbody>
-                                             </table>
-                                         </div>
-                                     </div>
-                                 </div>
+
                                  <!-- Single Tab Content End -->
 
                                  <!-- Single Tab Content Start -->
-                                 <div class="tab-pane fade" id="payment-method" role="tabpanel">
-                                     <div class="myaccount-content">
-                                         <h3>Payment Method</h3>
-                                         <p class="saved-message">You Can't Saved Your Payment Method yet.</p>
-                                     </div>
-                                 </div>
+
                                  <!-- Single Tab Content End -->
 
                                  <!-- Single Tab Content Start -->
-                                 <div class="tab-pane fade" id="address-edit" role="tabpanel">
-                                     <div class="myaccount-content">
-                                         <h3>Billing Address</h3>
-                                         <address>
-                                             <p><strong>{{$userId['name']}}</strong></p>
-                                             <p>1234 Market ##, Suite 900 <br>
-                                                 Lorem Ipsum, ## 12345</p>
-                                             <p>Mobile: (123) 123-456789</p>
-                                         </address>
-                                         <a href="#" class="btn flosun-button secondary-btn theme-color  rounded-0"><i class="fa fa-edit mr-2"></i>Edit Address</a>
-                                     </div>
-                                 </div>
+
                                  <!-- Single Tab Content End -->
 
                                  <!-- Single Tab Content Start -->

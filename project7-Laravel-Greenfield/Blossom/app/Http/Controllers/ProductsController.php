@@ -74,7 +74,7 @@ class ProductsController extends Controller
         $product->product_image = $imageName;
         $product->cat_id = $request->input('cat_id');
         $product->save();
-        return redirect('/product')->with('success', 'product updated!');
+        return redirect('/manageProduct')->with('success', 'product updated!');
     }
     public function destroy($id)
     {

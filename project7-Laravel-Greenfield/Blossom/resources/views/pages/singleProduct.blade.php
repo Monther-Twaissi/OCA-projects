@@ -55,8 +55,8 @@
                 <div class="product-summery position-relative">
                     <div class="product-head mb-3">
 
-                        <h2 class="product-title">{{$product->product_name}}</h2>
-                        <h2 class="product-title"><?php print_r($desc[0]['category_name'])  ?></h2>
+                        <h2 class="product-title mb-2">{{$product->product_name}}</h2>
+                        <h4 class="regular-price"><?php print_r($desc[0]['category_name'])  ?></h4>
                     </div>
                     <div class="price-box mb-2">
                         <span class="regular-price">JOD{{$product->product_price *0.8}}</span>
@@ -70,17 +70,11 @@
                     <div class="quantity-with_btn mb-5">
 
                         <div class="add-to_cart">
-                            <a class="btn product-cart button-icon flosun-button dark-btn" href="http://127.0.0.1:8000/cart">Add to cart</a>
-                            <a class="btn flosun-button secondary-btn secondary-border rounded-0" href="http://127.0.0.1:8000/shop">View More</a>
+                            <a class="btn product-cart button-icon flosun-button dark-btn" href="{{route('cart.show',$product->pro_id)}}">Add to cart</a>
+                            <a class="btn flosun-button secondary-btn secondary-border rounded-0" href="{{route('shop.index')}}">Continue shopping</a>
                         </div>
                     </div>
-                    <div class="social-share mb-4">
-                        <span>Share :</span>
-                        <a href="#"><i class="fa fa-facebook-square facebook-color"></i></a>
-                        <a href="#"><i class="fa fa-twitter-square twitter-color"></i></a>
-                        <a href="#"><i class="fa fa-linkedin-square linkedin-color"></i></a>
-                        <a href="#"><i class="fa fa-pinterest-square pinterest-color"></i></a>
-                    </div>
+
 
                 </div>
             </div>
@@ -96,7 +90,7 @@
                         <a class="nav-link text-uppercase" id="contact-tab" data-toggle="tab" href="#connect-3" role="tab" aria-selected="false">Shipping Policy</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-uppercase" id="review-tab" data-toggle="tab" href="#connect-4" role="tab" aria-selected="false">Size and details </a>
+                        <a class="nav-link text-uppercase" id="review-tab" data-toggle="tab" href="#connect-4" role="tab" aria-selected="false">Details </a>
                     </li>
                 </ul>
                 <div class="tab-content mb-text" id="myTabContent">
@@ -193,15 +187,10 @@
                     </div>
                     <div class="tab-pane fade" id="connect-4" role="tabpanel" aria-labelledby="review-tab">
                         <div class="size-tab table-responsive-lg">
-                            <h4 class="title-3 mb-4">Size details</h4>
+
                             <table class="table border">
                                 <tbody>
-                                    <tr>
-                                        <td class="cun-name"><span>Size</span></td>
-                                        <td>S</td>
-                                        <td>M</td>
-                                        <td>L</td>
-                                    </tr>
+
                                     <tr>
                                         <td class="cun-name"><span>Number of Flowers</span></td>
                                         <td>10</td>
@@ -242,7 +231,7 @@
             <div class="col-12 col-custom">
                 <div class="section-title text-center mb-30">
                     <span class="section-title-1">The Most Trendy</span>
-                    <h3 class="section-title-3">Related Products</h3>
+                    <h3 class="section-title-3">More Products</h3>
                 </div>
             </div>
             <!--Section Title End-->

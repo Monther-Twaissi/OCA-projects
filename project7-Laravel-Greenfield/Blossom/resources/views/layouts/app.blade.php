@@ -2,13 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    @auth
-    @if(\Illuminate\Support\Facades\Auth::user()->role != 'admin')
-    <script>
-        window.location = "/";
-    </script>
-    @endif
-    @endauth
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -53,7 +47,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-2 col-xl-2 col-md-6 col-6 col-custom">
                             <div class="header-logo d-flex align-items-center">
-                                <a href="index.html">
+                                <a href="index">
                                     <img src="{{asset('assets/images/logo/BlossomLogo2.png')}}" alt="Logo Image">
                                 </a>
                             </div>
@@ -74,8 +68,8 @@
 
                                     </li>
                                     <li>
-                                        <a href="my-account">
-                                            <span class="menu-text"> My Account</span>
+                                        <a href="account">
+                                            <span class="menu-text"> Profile</span>
                                             <i class="fa fa-angle-down"></i>
                                         </a>
                                         <ul class="dropdown-submenu dropdown-hover">
@@ -243,15 +237,15 @@
 
                                 </ul>
                                 </li>
-                                <li class="menu-item-has-children "><a href="">My Account</a>
+                                <li class="menu-item-has-children "><a href="account">My Account</a>
                                     <ul class="dropdown">
 
-                                        <li><a href="my-account.html">My Account</a></li>
+                                        <li><a href="account">My Account</a></li>
                                         <li><a href="login-register.html">login &amp; register</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="about-us.html">About Us</a></li>
-                                <li><a href="contact-us.html">Contact</a></li>
+                                <li><a href="about">About Us</a></li>
+                                <li><a href="contact">Contact</a></li>
 
                             </nav>
                             <!-- mobile menu navigation end -->
@@ -308,8 +302,8 @@
 
 
         <main>
-            @include('pages.message')
             @yield('content')
+            @include('pages.message')
         </main>
     </div>
     <!-- Modernizer JS -->

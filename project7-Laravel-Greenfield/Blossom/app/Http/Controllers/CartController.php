@@ -64,16 +64,17 @@ class CartController extends Controller
             ];
             session()->put('cart', $cart);
 
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
+            return back()->with('success', 'Product added to cart successfully!');
         }
         // if cart not empty then check if this product exist then increment quantity
         if (isset($cart[$id])) {
             $cart[$id]['quantity']++;
             session()->put('cart', $cart);
-            return redirect()->back()->with('success', 'Product added to cart successfully!');
+            return back()->with('success', 'Product added to cart successfully!');
         }
         // if item not exist in cart then add to cart with quantity = 1
         $cart[$id] = [
+            "id" => $product->pro_id,
             "name" => $product->product_name,
             "quantity" => 1,
             "price" => $product->product_price,
@@ -81,7 +82,7 @@ class CartController extends Controller
         ];
         session()->put('cart', $cart);
 
-        return redirect()->back()->with('success', 'Product added to cart successfully!');
+        return back()->with('success', 'Product added to cart successfully!');
     }
 
     public function update(Request $request)

@@ -48,8 +48,8 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a class="logo" href="/">
-                            <img src="{{asset('images/icon/logo.png')}}" alt="CoolAdmin" />
+                        <a href="index">
+                            <img src="{{asset('assets/images/logo/BlossomLogo2.png')}}" alt="Logo Image" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -88,30 +88,34 @@
         <!-- END HEADER MOBILE-->
 
         <!-- MENU SIDEBAR-->
-        <aside class="menu-sidebar d-none d-lg-block">
-            <div class="logo">
-                <a href="/">
-                    <img src="{{asset('images/icon/logo.png')}}" alt="Cool Admin" />
-                </a>
-            </div>
+        <aside class="menu-sidebar d-none d-lg-block" style="overflow: hidden;">
+            <a href="/user">
+                <img src="{{asset('assets/images/logo/BlossomLogo2.png')}}" style="width: 15rem; height:5rem; margin-top:0.5rem; margin-left:0.5rem" alt="Logo Image" />
+            </a>
+
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
                         <li class="class=" {{request()->getRequestUri() == '/user' ? 'active': ''}}">
-                            <a class="js-arrow" href="user">
-                                <i class="fas fa-tachometer-alt"></i>
+                            <a class="js-arrow" href="/user">
+                                <i class="fas fa-user"></i>
                                 Manage Users</a>
                         </li>
 
                         <li class="{{request()->getRequestUri() == '/manageCategory' ? 'active': ''}}">
-                            <a class="js-arrow" href="manageCategory">
-                                <i class="fas fa-tachometer-alt"></i>
+                            <a class="js-arrow" href="/manageCategory">
+                                <i class="fas fa-image"></i>
                                 Manage Category</a>
                         </li>
                         <li class="{{request()->getRequestUri() == '/manageProduct' ? 'active': ''}}">
-                            <a class="js-arrow" href="manageProduct">
-                                <i class="fas fa-tachometer-alt"></i>
+                            <a class="js-arrow" href="/manageProduct">
+                                <i class="fas fa-image"></i>
                                 Manage Products</a>
+                        </li>
+                        <li>
+                            <a class="js-arrow" href="/">
+                                <i class="fas fa-arrow-right"></i>
+                                Public Site</a>
                         </li>
                     </ul>
                 </nav>
@@ -135,16 +139,16 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                            <img src="/images/{{auth()->user()->image}}" alt="John Doe" />
+                                            <img src="/images/{{auth()->user()->image}}" />
                                         </div>
                                         <div class="content">
-                                            <a class="js-acc-btn" href="#"> {{auth()->user()->name}}</a>
+                                            <a class="js-acc-btn" href="#">{{auth()->user()->name}}</a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
                                             <div class="info clearfix">
                                                 <div class="image">
                                                     <a href="#">
-                                                        <img src="/images/{{auth()->user()->image}}" alt="John Doe" />
+                                                        <img src="/images/{{auth()->user()->image}}" />
                                                     </a>
                                                 </div>
                                                 <div class="content">

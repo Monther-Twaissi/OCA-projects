@@ -22,9 +22,11 @@ class PublicController extends Controller
             ->join('products', 'categories.cat_id', '=', 'products.cat_id')
             ->select('categories.category_name', 'products.*')
             ->get();
+        $catPlus5 = DB::table('categories')->where('cat_id', '>=', 6)
+            ->get();
 
         // return View::first(['pages.index', 'shop2'], compact('categories', 'products'));
-        return view('pages.index2', compact('categories', 'products'));
+        return view('pages.index2', compact('categories', 'products', 'catPlus5'));
     }
 
     /**
